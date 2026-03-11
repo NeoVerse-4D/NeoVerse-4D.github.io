@@ -239,6 +239,20 @@
                   <span>Single-view to Multi-view</span>
                 </a>
               </span>
+
+              <span class="link-block">
+                <a href="#camera_shake_control"
+                   class="external-link button is-normal is-rounded">
+                  <span>Camera Shake Control</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#zoom_control"
+                   class="external-link button is-normal is-rounded">
+                  <span>Zoom Control</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -307,12 +321,12 @@
               <strong>NeoVerse is a versatile 4D world model that is capable of 4D reconstruction, novel-trajectory video generation, and rich downstream applications.</strong>
             </p>
           </div>
-          <video class="video" width="100%" id="mainvideo" autoplay loop playsinline controls style="margin-top: -20px">
+          <video class="video" width="100%" id="mainvideo" autoplay muted loop playsinline controls style="margin-top: -20px">
             <source id="mp4" src="resources/NeoVerse_public.mp4" type="video/mp4">
           </video>
-          <script>
+          <!-- <script>
             document.getElementById('mainvideo').volume = 0.5; // 50%
-          </script>
+          </script> -->
 
         </div>
       </div>
@@ -481,6 +495,76 @@
         <video class="carousel-video" autoplay muted loop playsinline controls style="margin-top: -20px">
           <source src="resources/single_to_multi.mp4" type="video/mp4">
         </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px" id="camera_shake_control">Camera Shake Control</h2>
+          <div class="content has-text-justified">
+            <p style="font-size: 1.2em;">
+              <strong>NeoVerse can re-plan camera trajectories to either stabilize shaky dashcam videos or inject realistic shake into smooth ones — enabling both directions of control beyond simple pixel-level transforms.</strong>
+            </p>
+          </div>
+        <div class="columns is-multiline" style="margin-top: -20px">
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/shaking_original.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Original Shaky Video</p>
+          </div>
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/shaking_stabilized.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Stabilized Result</p>
+          </div>
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/smooth_original.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Original Smooth Video</p>
+          </div>
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/smooth_shake_added.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Shake-Injected Result</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px" id="zoom_control">Zoom Control</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 1.2em;">
+            <strong>NeoVerse supports dynamic focal length adjustment, enabling continuous zoom from wide-angle to close-up views.</strong>
+          </p>
+        </div>
+        <div class="columns" style="margin-top: -20px">
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/zoom_original.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Original Video</p>
+          </div>
+          <div class="column is-half">
+            <video class="carousel-video" autoplay muted loop playsinline controls>
+              <source src="resources/zoom_effect.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 5px; font-size: 1.1em;">Zoom Effect: Default → Wide-angle → Close-up</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
